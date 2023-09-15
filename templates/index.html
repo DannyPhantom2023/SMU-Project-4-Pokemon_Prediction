@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>TITANIC ML</title>
+    <title>Pokemon Battle ML</title>
     <!-- Boostrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/minty/bootstrap.min.css">
     <!-- Our CSS -->
@@ -25,35 +25,45 @@
         <div class="collapse navbar-collapse" id="navbarColor01">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Titanic
+                    <a class="nav-link" href="#">Pokemon Battle
                 <span class="sr-only">(current)</span>
               </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about_us">About Us</a>
                 </li>
             </ul>
         </div>
     </nav>
-    <a href="/about_us">About Us</a>
+    <div>
+        <div class="card text-white bg-success mb-3" style="max-width: 20rem;">
+            <div class="card-header">How does it work?</div>
+                <div class="card-body">
+                <p class="card-text">You input two pokedex numbers to represent your battlers below, if you need to find these you can look at our tableau dashboard to explore the available pokemon. Otherwise you may enter two numbers between 1-801, we then take those and gather the statistics for the respective pokemon and pass that information into our prediction model to tell you who would win.</p>
+                </div>
+            </div>
+    </div>
     <hr style="color:lightgray; border-width: 3px;">
     <div class="container">
         <div class="card border-primary mb-3" style="max-width: 20rem;">
-            <div class="card-header">Filters</div>
+            <div class="card-header">Pick your Pokemon:</div>
             <div class="card-body">
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
                             <label class="col-form-label" for="pokemon1">Pokemon #1</label>
-                            <input type="number" class="form-control" value="4" id="pokemon1">
+                            <input type="number" class="form-control" value="4" min="1" max="801" id="pokemon1">
                             </select>
                         </div>
                         <div class="form-group">
                             <label class="col-form-label" for="pokemon2">Pokemon #2</label>
-                            <input type="number" class="form-control" value="1" id="pokemon2">
+                            <input type="number" class="form-control" value="1" min="1" max="801" id="pokemon2">
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <button type="button" class="btn btn-primary" id="filter">Make Prediction!</button>
+                        <button type="button" class="btn btn-primary" id="filter">Battle!</button>
                     </div>
                 </div>
             </div>
