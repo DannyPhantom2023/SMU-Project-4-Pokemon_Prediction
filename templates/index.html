@@ -7,7 +7,7 @@
     <!-- Boostrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/minty/bootstrap.min.css">
     <!-- Our CSS -->
-    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
     <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- JS -->
@@ -35,17 +35,18 @@
             </ul>
         </div>
     </nav>
-    <div>
+    <hr style="color:lightgray; border-width: 3px;">
+    <div class="d-flex jjk">
+        <div class="container-fluid" style="width: auto">
         <div class="card text-white bg-success mb-3" style="max-width: 20rem;">
             <div class="card-header">How does it work?</div>
                 <div class="card-body">
-                <p class="card-text">You input two pokedex numbers to represent your battlers below, if you need to find these you can look at our tableau dashboard to explore the available pokemon. Otherwise you may enter two numbers between 1-801, we then take those and gather the statistics for the respective pokemon and pass that information into our prediction model to tell you who would win.</p>
+                <p class="card-text">You input two pokedex numbers to represent your battlers, if you need to find these you can look at our tableau dashboard to explore the available pokemon. Otherwise you may enter two numbers between 1-801, we then take those and gather the statistics for the respective pokemon and pass that information into our prediction model to tell you who would win.</p>
                 </div>
             </div>
     </div>
-    <hr style="color:lightgray; border-width: 3px;">
-    <div class="container">
-        <div class="card border-primary mb-3" style="max-width: 20rem;">
+    <div class="container-fluid" style="width: auto">
+        <div class="card border-primary mb-3" style="max-width: 20rem; min-width: 18rem">
             <div class="card-header">Pick your Pokemon:</div>
             <div class="card-body">
                 <div class="row">
@@ -69,6 +70,7 @@
             </div>
         </div>
     </div>
+</div>
     <hr style="color:lightgray; border-width: 3px;">
     <div class="container-fluid">
         <div class="row">
@@ -77,7 +79,7 @@
             </div>
         </div>
     </div>
-
+        <hr style="color:lightgray; border-width: 3px;">
 </body>
 
 </html>
