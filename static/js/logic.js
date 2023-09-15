@@ -32,7 +32,7 @@ function makePredictions() {
             // print it
             console.log(returnedData);
 
-            if (returnedData["prediction"] === "1") {
+            if (parseFloat(returnedData["prediction"]) > .5) {
                 $("#output").text(`${pokemon2} wins!`);
             } else {
                 $("#output").text(`${pokemon1} wins!`);
