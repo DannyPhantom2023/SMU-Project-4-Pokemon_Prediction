@@ -10,24 +10,16 @@ $(document).ready(function() {
 
 // call Flask API endpoint
 function makePredictions() {
-    var sex_flag = $("#gender").val();
-    var age = $("#age").val();
-    var fare = $("#fare").val();
-    var familySize = $("#familySize").val();
-    var p_class = $("#pclass").val();
-    var embarked = $("#embarked").val();
+    var pokemon1 = $("#pokemon1").val();
+    var pokemon2 = $("#pokemon2").val();
 
 
     // check if inputs are valid
 
     // create the payload
     var payload = {
-        "sex_flag": sex_flag,
-        "age": age,
-        "fare": fare,
-        "familySize": familySize,
-        "p_class": p_class,
-        "embarked": embarked
+        "pokemon1": pokemon1,
+        "pokemon2": pokemon2
     }
 
     // Perform a POST request to the query URL
@@ -41,9 +33,9 @@ function makePredictions() {
             console.log(returnedData);
 
             if (returnedData["prediction"] === "1") {
-                $("#output").text("You Survived!");
+                $("#output").text(`${pokemon2} wins!`);
             } else {
-                $("#output").text("You did not survive, sorry. :(");
+                $("#output").text(`${pokemon1} wins!`);
             }
 
         },
