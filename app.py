@@ -11,6 +11,11 @@ modelHelper = ModelHelper()
 @app.route("/")
 def home():
     # Return template and data
+    return render_template("info.html")
+
+@app.route("/predictions")
+def predictions():
+    # Return template and data
     return render_template("index.html")
 
 @app.route("/about_us")
