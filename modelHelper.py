@@ -22,7 +22,8 @@ class ModelHelper():
         inp = pd.merge(poke1_data, poke2_data, left_index=True, right_index=True, suffixes=['_1', '_2'])
         filename = 'pokemon-battle-model.sav'
         xgb_load = pickle.load(open(filename, 'rb'))
-        features = xgb_load.get_booster().feature_names
+        boost = xgb_load.booster_
+        features = boost.feature_name()
         inp = inp.loc[:, features]
         rtn = xgb_load.predict_proba(inp)
         rtn = rtn.tolist()
