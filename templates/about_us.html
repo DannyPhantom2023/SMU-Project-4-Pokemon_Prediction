@@ -5,16 +5,113 @@
     <meta charset="utf-8">
     <title>About Us</title>
     <!-- Boostrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/minty/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/journal/bootstrap.min.css">
     <!-- Our CSS -->
     <link rel="stylesheet" type="text/css" href="static/css/style.css">
     <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+    <style>
+        .card-container {
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap !important;
+            align-items: stretch !important;
+        }
+        .card-header{
+            font-size: larger;
+            font-weight: bold;
+        }
+        article {
+          -webkit-flex: 3;
+          -ms-flex: 3;
+          flex: 3;
+          padding: 1rem;
+          flex-direction: column
+        }
+        img {
+            object-fit: contain;
+            height: 300px;
+            width: 300px;
+        }
+        @media (max-width: 600px) {
+          section {
+            -webkit-flex-direction: column;
+            flex-direction: column;
+          }
+        }
+    </style>
 </head>
 
 <body>
-    <h1>I am Prof Booth. Addis is cool.</h1>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Pokemon Machine Learning</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/predictions">Battle</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/tableau">Tableau</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/about_us">About Us
+                        <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+<br>
+    <h2 style="text-align:center">Our Members</h2>
+    <div class="card-container m-1" style="display: flex;">
+    <article>
+    <div class="card border-primary m-3" style="width:auto; text-align:center;">
+        <div class="card-header">Rob Maysent</div>
+        <div class="card-body" style="display: flex; flex-direction: column">
+            <img src="{{url_for('static', filename='Rob.jpg')}}" alt="Rob" style="width:100%; height: auto">
+          <h4 class="card-title"></h4>
+          <p class="card-text"> Rob is a young professional learning about data and how its interpolation can be used to reinvigorate workflow for numerous industries. He hopes one day to work in the cutting-edge industry of machine learning and AI in the hopes of creating new systems to improve our everyday lifestyle through advancements in data science and related technology.</p>
+        </div>
+    </div>
+    </article>
+    <article>
+        <div class="card border-primary m-3" style="width:auto; text-align:center;">
+            <div class="card-header">Daniel Hall</div>
+            <div class="card-body" style="display: flex; flex-direction: column">
+                <img src="{{url_for('static', filename='Dan.png')}}" alt="Dan" style="width:100%; height: auto">
+              <h4 class="card-title"></h4>
+              <p class="card-text"> I'm Daniel, a young and enthusiastic graduate data analyst with a passion for uncovering hidden insights within the vast sea of data. Armed with a certification in data science and a curiosity-driven mindset, I thrive on transforming complex datasets into actionable intelligence.</p>
+            </div>
+        </div>
+    </article>
+    <article>
+        <div class="card border-primary m-3" style="width:auto; text-align:center;">
+            <div class="card-header">Ryan Johnson</div>
+            <div class="card-body" style="display: flex; flex-direction: column">
+                <img src="{{url_for('static', filename='Ryan.jpg')}}" alt="Ryan" style="width:100%; height: auto">
+              <h4 class="card-title"></h4>
+              <p class="card-text"> Born and raised in Nebraska, Ryan was always interested in a grander picture. After 2 years of college in northern Nebraska, he moved to California to continue his education in Behavioral Neuroscience at UCI. Ryan lived in Orange County for 5 years before deciding to move to Dallas, Texas to continue their personal and professional growth. This ultimately led them to join a Data Science Bootcamp with SMU. With 10+ years of customer service and property management-related experience, Ryan hopes to start a new career for themselves in the field of computer science and data analytics. </p>
+            </div>
+        </div>
+        </article>
+    </div>
+<div class="footer" style="max-width: 100%">
+    <div class="row">
+        <div class="col">
+            <ul class="list-unstyled">
+              <li>
+                  <a href="https://github.com/DannyPhantom2023/SMU-Project-4-Pokemon_Prediction">GitHub</a>
+              </li>
+            </ul>
+          </div>
+    </div>
+</div>
 </body>
 
 </html>
