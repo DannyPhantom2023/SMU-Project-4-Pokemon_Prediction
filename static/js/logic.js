@@ -10,8 +10,8 @@ $(document).ready(function() {
 
 // call Flask API endpoint
 function makePredictions() {
-    var pokemon1 = $("#pokemon1").val();
-    var pokemon2 = $("#pokemon2").val();
+    var pokemon1 = ($("#pokemon1").val() > 801) ? 1 : $("#pokemon1").val();
+    var pokemon2 = ($("#pokemon2").val() > 801) ? 1 : $("#pokemon2").val();
     // check if inputs are valid
 
     // create the payload
