@@ -26,7 +26,7 @@ def about_us():
 @app.route("/tableau")
 def tableau():
     # Return template and data
-    return render_template("tableau2.html")
+    return render_template("tableau.html")
 
 @app.route("/makePredictions", methods=["POST"])
 def make_predictions():
