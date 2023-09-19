@@ -12,8 +12,6 @@ $(document).ready(function() {
 function makePredictions() {
     var pokemon1 = $("#pokemon1").val();
     var pokemon2 = $("#pokemon2").val();
-
-
     // check if inputs are valid
 
     // create the payload
@@ -32,10 +30,19 @@ function makePredictions() {
             // print it
             console.log(returnedData);
 
+            var pred_value = parseFloat(returnedData["prediction"]);
+            var pred2_value = (1 - parseFloat(returnedData["prediction"]));
+
+            var result1 = pred_value * 100;
+            var result2 = pred2_value * 100;
+
+            var percentage1 = result1.toString()
+            var percentage2 = result2.toString()
+
             if (parseFloat(returnedData["prediction"]) > .5) {
-                $("#output").text(`${pokemon2} wins!`);
+                $("#output").text(`Pokemon ${pokemon2} wins, with a likelihood of ${percentage1.substring(0,2)}%`);
             } else {
-                $("#output").text(`${pokemon1} wins!`);
+                $("#output").text(`${pokemon1} wins, with a likelihood of ${percentage2.substring(0,2)}%`);
             }
 
         },
